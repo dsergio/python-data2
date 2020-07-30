@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt
 from numpy import nan
 
 
+
 # read data from CSV
 #
 beers = pd.read_csv(".\\beers\\beers.csv", encoding="ISO-8859-1")
@@ -27,17 +28,21 @@ taphandles = pd.read_csv(".\\taphandles\\pubstyle-taphandles.csv", encoding="ISO
 #
 print(beers.head(10))
 print("\n\n")
-print(beers.describe())
+beers_describe = beers.describe()
+print(beers_describe)
+beers_describe.to_csv("beers_describe.csv")
 print("\n\n")
 
 print(breweries.head(10))
 print("\n\n")
-print(breweries.describe())
+breweries_describe = breweries.describe()
+breweries_describe.to_csv("breweries_describe.csv")
 print("\n\n")
 
 print(taphandles.head(10))
 print("\n\n")
-print(taphandles.describe())
+taphandles_describe = taphandles.describe()
+taphandles_describe.to_csv("taphandles_describe.csv")
 print("\n\n")
 
 
