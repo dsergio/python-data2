@@ -22,30 +22,6 @@ beers = pd.read_csv(".\\beers\\beers.csv", encoding="ISO-8859-1")
 breweries = pd.read_csv(".\\beers\\breweries.csv", encoding="ISO-8859-1")
 taphandles = pd.read_csv(".\\taphandles\\pubstyle-taphandles.csv", encoding="ISO-8859-1")
 
-
-# Print first 10 rows of each dataset
-# Describe dataset
-#
-print(beers.head(10))
-print("\n\n")
-beers_describe = beers.describe()
-print(beers_describe)
-beers_describe.to_csv("beers_describe.csv")
-print("\n\n")
-
-print(breweries.head(10))
-print("\n\n")
-breweries_describe = breweries.describe()
-breweries_describe.to_csv("breweries_describe.csv")
-print("\n\n")
-
-print(taphandles.head(10))
-print("\n\n")
-taphandles_describe = taphandles.describe()
-taphandles_describe.to_csv("taphandles_describe.csv")
-print("\n\n")
-
-
 # Missing Data
 # 
 for col in beers.columns: 
@@ -76,6 +52,28 @@ print("taphandles missing data:")
 print(taphandles.isnull().sum())
 print("\n\n")
 
+
+# Print first 10 rows of each dataset
+# Describe dataset
+#
+print(beers.head(10))
+print("\n\n")
+beers_describe = beers.describe()
+print(beers_describe)
+beers_describe.to_csv("beers_describe.csv")
+print("\n\n")
+
+print(breweries.head(10))
+print("\n\n")
+breweries_describe = breweries.describe()
+breweries_describe.to_csv("breweries_describe.csv")
+print("\n\n")
+
+print(taphandles.head(10))
+print("\n\n")
+taphandles_describe = taphandles.describe()
+taphandles_describe.to_csv("taphandles_describe.csv")
+print("\n\n")
 
 # Histograms, multiple plots
 # 
